@@ -1,6 +1,66 @@
 canvas {
-    width: 100%;
-    max-width: 100%;
-    height: 70%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
+  width: 100%;
+
+  height: 70%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+#form-container {
+  background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.container-background {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  height: auto;
+}
+#graphCanvas {
+  width: 100%;
+}
+
+.divGraph {
+  border: 20px;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+#background::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, black 10%, transparent 10%);
+  background-size: 30px 30px;
+}
+input {
+  border: 2px solid transparent;
+  width: 15em;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+input:hover,
+input:focus {
+  border: 2px solid #4a9dec;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}

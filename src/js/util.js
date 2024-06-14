@@ -22,10 +22,11 @@ function calcular() {
   console.log("x", X);
   console.log("y", Y);
 
+  var tipo=document.getElementById("tipofuncao");
 
   if (isPrimeiroGrau(X, Y)) {
-    console.log("Função de primeiro grau");
-
+    
+tipo.innerHTML="Função de primeiro grau";
     for (let i = 0; i < X.length; i++) {
       plotPoint(X[i], Y[i], "blue");
     }
@@ -33,15 +34,15 @@ function calcular() {
     calcularPrimeiroGrau();
     
   } else if (isSegundoGrau(X, Y)) {
-    console.log("Função de segundo grau");
-
+   
+    tipo.innerHTML="Função de segundo grau";
     for (let i = 0; i < X.length; i++) {
       plotPoint(X[i], Y[i], "blue");
     }
 
     calcularSegundoGrau();
   } else {
-    alert("Não é possível determinar a função");
+    tipo.innerHTML="Módelo não compativel";
   }
 }
 

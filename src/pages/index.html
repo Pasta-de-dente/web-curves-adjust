@@ -10,15 +10,18 @@
   </head>
     <title>Ajuste de Curva</title>
 </head>
-<body class="bg-secondary">
+<body id="background">
 
-    <header class="text-white text-center py-3">
-        <h1>Ajuste de Curva</h1>
+    <nav class="navbar sticky-bottom bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ajuste de curva</a>
+        </div>
+      </nav>
 
-    <div class="container d-flex justify-content-between align-items-center">
-        <div class="inputs order-2">
+    <div class="container-background" >
+        <div class="inputs order-2" id="form-container" >
             <table class="table border rounded-3 overflow-hidden" id="tabelaPontos">
-                <thead>
+                <thead >
                     <tr class="table-dark">
                         <th class="text-center">X</th>
                         <th class="text-center">Y</th>
@@ -46,16 +49,22 @@
                 </tbody>
             </table>
 
-            <button class="btn btn-primary w-100" onclick="calcular()">Calcular</button>
-
-
-            <span id="funcao_resultado" style="margin:12px;font-weight: bold;font-size: 1rem;"></span>
+           <div style="display: flex; gap: 20px;"> <button class="btn btn-primary w-100" onclick="calcular()">Calcular</button> <button class="btn btn-primary w-50" onclick="window.location.reload()">Reload</button></div>
+        
+            <div class="alert alert-primary d-flex align-items-center"style="height:50px;" role="alert" >
+               
+                <div id="tipofuncao" style="color: black;font-weight: bold;">
+                
+                </div>
+              </div>
+            <span id="funcao_resultado" style="padding:12px;font-weight: bold;font-size: 1rem; background: #ffffff;height: 100%;color: black; border-radius: 15px;"></span>
 
         </div>
-        <div class="graph bg-light border rounded-3 order-1">
-            <canvas id="graphCanvas" width="800" height="600"></canvas>
-        </div>
-
+        <div >
+                <div class="graph bg-light border rounded-3 order-1">
+                    <canvas id="graphCanvas" width="1980" height="1280"></canvas>
+                </div>
+      </div>
     </div>
     <script src="../js/util.js"></script>
 
