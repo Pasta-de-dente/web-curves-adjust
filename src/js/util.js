@@ -3,6 +3,7 @@ let Y = [];
 let funcaoResultado = document.getElementById("funcao_resultado");
 
 function calcular() {
+  
   const inputsX = document.querySelectorAll(
     '#tabelaPontos input[name="campo1[]"]'
   );
@@ -42,6 +43,7 @@ tipo.innerHTML="Função de primeiro grau";
 
     calcularSegundoGrau();
   } else {
+    funcaoResultado.innerHTML ="";
     tipo.innerHTML="Módelo não compativel";
   }
 }
